@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import Header from "./Header";
+import ActivityFeed from "./components/ActivityFeed";
+import ActivityDetail from "./components/ActivityDetail";
 
-import Header from './Header.jsx';
-
-const App = () => {
+function App() {
   return (
-    <div className='container'>
-      <Header/>
-      <div className="container-view">Some activities should be here</div>
+    <div className="bg-red-500">
+      <Header />
+      <div className="flex flex-col">
+        <ActivityFeed />
+        <ActivityDetail />
+      </div>
     </div>
   );
-};
-
-ReactDOM.render(<App/>, document.getElementById('app'));
+}
 
 export default App;
