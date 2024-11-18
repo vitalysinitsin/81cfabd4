@@ -16,6 +16,7 @@ export default function ActivityFeed({ setCall }) {
   };
 
   const archiveAllCallsClick = () => {
+    setCall({});
     data.forEach((call) => archiveCall(call));
   };
 
