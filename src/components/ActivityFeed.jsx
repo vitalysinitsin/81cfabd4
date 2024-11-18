@@ -1,13 +1,22 @@
-import { useFetchCallsQuery, useResetAllCallsMutation } from "../store";
+import {
+  useArchiveCallMutation,
+  useFetchCallsQuery,
+  useResetAllCallsMutation,
+} from "../store";
 import CallPreview from "./CallPreview";
 import Button from "./Button";
 
 export default function ActivityFeed({ setCall }) {
   const { data, isFetching, error } = useFetchCallsQuery();
   const [resetAllCalls] = useResetAllCallsMutation();
+  const [archiveCall] = useArchiveCallMutation();
 
   const resetAllCallsClick = () => {
     resetAllCalls();
+  };
+
+  const archiveAllCallsClick = () => {
+    data.forEach((call) => archiveCall(call));
   };
 
   let content = "";
@@ -27,13 +36,20 @@ export default function ActivityFeed({ setCall }) {
     ));
   }
   return (
-    <div className="w-[20em] overflow-hidden relative">
+    <div className="w-[30em] overflow-hidden relative">
       <Button
         onClick={resetAllCallsClick}
         className="flex h-10 w-full mt-1 mb-4w-full shadow-inner border-b-4 "
         loading={isFetching}
       >
         Reset All Calls
+      </Button>
+      <Button
+        onClick={archiveAllCallsClick}
+        className="flex h-10 w-full mt-1 mb-4w-full shadow-inner border-b-4 "
+        loading={isFetching}
+      >
+        Archive All Calls
       </Button>
       <div className="overflow-auto absolute h-full w-full">{content}</div>
     </div>
