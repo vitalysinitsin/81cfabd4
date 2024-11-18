@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/speer_fe_challenge/static/css/main.94f39b9b.css",
+    "main.js": "/speer_fe_challenge/static/js/main.d86bbecc.js",
+    "index.html": "/speer_fe_challenge/index.html",
+    "main.94f39b9b.css.map": "/speer_fe_challenge/static/css/main.94f39b9b.css.map",
+    "main.d86bbecc.js.map": "/speer_fe_challenge/static/js/main.d86bbecc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94f39b9b.css",
+    "static/js/main.d86bbecc.js"
+  ]
+}
