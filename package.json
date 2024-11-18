@@ -1,7 +1,7 @@
 {
   "name": "speer_fe_challenge",
   "version": "0.1.0",
-  "homepage": "https://hungryvito.github.io/speer_fe_challenge",
+  "homepage": "https://hungryvito.github.io/81cfabd4jobAssessment",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
