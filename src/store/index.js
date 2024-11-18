@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { callsApi } from "./apis/callsApi";
 import { setupListeners } from "@reduxjs/toolkit/query";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     [callsApi.reducerPath]: callsApi.reducer,
   },

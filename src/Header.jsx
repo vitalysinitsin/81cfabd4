@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center h-16 overflow-hidden bg-white">
+    <header className="flex justify-between items-center overflow-hidden bg-white shadow-md">
       <svg
         width="486px"
         height="168px"
